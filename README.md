@@ -147,9 +147,17 @@ mysql -u root -p < tables.sql
 
 ### 3. Load the sample data
 
+Execute the SQL files to populate the database tables:
+
 ```bash
-mysql -u root -p ecommerce_analytics < data.sql
+mysql -u root -p ecommerce_analytics < table_data/Categories.sql
+mysql -u root -p ecommerce_analytics < table_data/Customer.sql
+mysql -u root -p ecommerce_analytics < table_data/product.sql
+mysql -u root -p ecommerce_analytics < table_data/orders.sql
+mysql -u root -p ecommerce_analytics < table_data/order_item.sql
 ```
+
+Run the scripts in this order to ensure that referenced records exist before inserting dependent records.
 
 ### 4. Run the analysis
 
