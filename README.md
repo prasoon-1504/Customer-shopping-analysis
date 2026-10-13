@@ -98,12 +98,29 @@ Some of the findings from the current dataset include:
 ## Project Structure
 
 ```text
-ecommerce-analytics/
-├── README.md
-├── tables.sql
-├── data.sql
-└── analysis.sql
+ecommerce_analytics/
+├── analysis/
+│   └── analysis.sql
+├── table/
+│   ├── Categories.sql
+│   ├── Customer.sql
+│   ├── orders.sql
+│   ├── product.sql
+│   └── order_item.sql
+├── table_data/
+│   ├── Categories.sql
+│   ├── Customer.sql
+│   ├── orders.sql
+│   ├── product.sql
+│   └── order_item.sql
+├── .gitignore
+└── README.md
 ```
+
+- `analysis/` contains SQL queries used to investigate the e-commerce dataset.
+- `table/` contains scripts for creating the database tables and defining their relationships.
+- `table_data/` contains scripts for inserting sample records into the tables.
+- `.gitignore` excludes local files and environment-specific dependencies from version control.
 
 - `tables.sql` — creates the database tables and relationships.
 - `data.sql` — inserts the sample data.
